@@ -3,7 +3,7 @@ def call(String backendImage, String frontendImage) {
     echo "Pushing Docker images"
 
     withCredentials([usernamePassword(
-        credentialsId: 'dockerhubcred',
+        credentialsId: 'dockerhub-credentials',
         passwordVariable: 'dockerHubPass',
         usernameVariable: 'dockerHubUser'
     )]) {
