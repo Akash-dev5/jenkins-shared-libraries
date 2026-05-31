@@ -10,10 +10,10 @@ def call(String backendImage, String frontendImage) {
 
         sh "docker login -u ${dockerHubUser} -p ${dockerHubPass}"
 
-        sh "docker image tag djangocicd-backend:latest ${dockerHubUser}/djangocicd-backend:latest"
+        
         sh "docker push ${dockerHubUser}/djangocicd-backend:latest"
 
-        sh "docker image tag djangocicd-frontend:latest ${dockerHubUser}/djangocicd-frontend:latest"
+        
         sh "docker push ${dockerHubUser}/djangocicd-frontend:latest"
     }
 }
